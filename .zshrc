@@ -75,3 +75,7 @@ case $TERM in
         precmd () {print -Pn "\e]0;%n@%m: %~\a"}
         ;;
 esac
+
+# Set environment variables
+export EDITOR=${EDITOR:-/bin/emacs}
+export PAGER=${PAGER:-/usr/bin/less}
