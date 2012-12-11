@@ -1,15 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/plugins/" )
-;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
+(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
 (server-start)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-
-; add community maintained repos
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
 
 ; add bindings for kill ring browser
 (when (require 'browse-kill-ring nil 'noerror)
