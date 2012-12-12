@@ -30,6 +30,8 @@ compctl -g "*.ods" localc
 compctl -g "*.doc *.odt" libreoffice writer
 compctl -g "*.ods" libreoffice calc
 
+# Traverse completions with keyboard
+zstyle ':completion:*' menu select 
 
 #use LS_COLORS
 alias ls='ls --color=auto'
