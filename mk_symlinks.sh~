@@ -1,0 +1,4 @@
+
+USER=
+
+ln -s dotfiles/.emacs.d /home/$USER/.emacs.d
