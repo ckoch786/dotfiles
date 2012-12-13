@@ -1,10 +1,8 @@
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd extendedglob
 bindkey -e
-# End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ckoch/.zshrc'
 
@@ -18,6 +16,13 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 # Command correction
 setopt correct
+
+setopt AUTO_PUSHD
+
+setopt APPEND_HISTORY # don't overwrite history; append instead
+#setopt INC_APPEND_HISTORY # append after each command
+setopt SHARE_HISTORY # share history between shells
+
 
 
 # Custom auto completions for specific apps
@@ -33,8 +38,14 @@ compctl -g "*.ods" libreoffice calc
 # Traverse completions with keyboard
 zstyle ':completion:*' menu select 
 
-#use LS_COLORS
+# Aliases
 alias ls='ls --color=auto'
+alias df="df -h"
+alias du="du -hs"
+alias greps="grep -IR --color=yes -D skip --exclude-dir=.git"
+alias la="ls -A --color=auto -h --group-directories-first"
+alias ll="ls -lA --color=auto -h  --group-directories-first"
+alias ls="ls --color=auto   --group-directories-first"
 
 # For using colors by name
 autoload -U colors
