@@ -27,6 +27,8 @@ setopt SHARE_HISTORY # share history between shells
 
 # Custom auto completions for specific apps
 compctl -g "*.png *.svg" viewnior
+compctl -g "*.hs" ghc
+compctl -g "*.hs" runhaskell
 # Enable for Gentoo LibreOffice
 compctl -g "*.doc *.odt" lowriter
 compctl -g "*.ods" localc
