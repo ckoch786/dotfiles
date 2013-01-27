@@ -85,6 +85,19 @@ ad()
     dist
 }
 
+# Change keyboard layout to us
+ao()
+{
+    setxkbmap -layout us
+}
+
+# Change keyboard layout to dvorak
+qw()
+{
+    setxkbmap -layout dvorak
+} 
+
+
 # Set title on terminal
 case $TERM in
     xterm*)
