@@ -27,6 +27,8 @@ setopt SHARE_HISTORY # share history between shells
 
 # Custom auto completions for specific apps
 compctl -g "*.png *.svg" viewnior
+compctl -g "*.hs" ghc
+compctl -g "*.hs" runhaskell
 # Enable for Gentoo LibreOffice
 compctl -g "*.doc *.odt" lowriter
 compctl -g "*.ods" localc
@@ -108,3 +110,12 @@ esac
 # Set environment variables
 export EDITOR=${EDITOR:-/bin/emacs}
 export PAGER=${PAGER:-/usr/bin/less}
+
+
+# Add build tools home paths and add then to the path
+export WINEDEBUG=-all
+export GRAILS_HOME=/home/ckoch/grails-1.2.1
+export JAVA_HOME=/opt/icedtea-bin-6.1.11.4
+export STS_HOME=/home/ckoch/springsource/sts-3.1.0.RELEASE
+export STS_GG_HOME=/home/ckoch/springsource_groovy_grails/ggts-3.1.0.RELEASE
+export PATH=${PATH}:${GRAILS_HOME}/bin:${STS_HOME}:${STS_GG_HOME}
