@@ -1,0 +1,35 @@
+# Functions
+arch() 
+{
+    uname -m
+}
+
+dist() 
+{
+
+    if [[ -a "/etc/gentoo-release" ]]
+    then
+        echo "gentoo"
+    elif [[ -a "/etc/debian_version" ]]
+    then
+        echo "debian"
+    fi
+}
+
+ad()
+{
+    arch
+    dist
+}
+
+# Change keyboard layout to us
+ao()
+{
+    setxkbmap -layout us
+}
+
+# Change keyboard layout to dvorak
+qw()
+{
+    setxkbmap -layout dvorak
+} 

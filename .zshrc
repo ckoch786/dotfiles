@@ -1,8 +1,14 @@
+#TODO create and source separate files for home, school(green, lab, and ET),
+#     th1, aliases, custome completions
+
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
+WORK=~/.zsh_work
+FUNCTIONS=~/.zsh_functions
 setopt autocd extendedglob
 bindkey -e
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/ckoch/.zshrc'
 
@@ -62,42 +68,8 @@ promptinit
 # Gentoo prompt 
 PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
 
-
-# Functions
-arch() 
-{
-    uname -m
-}
-
-dist() 
-{
-
-    if [[ -a "/etc/gentoo-release" ]]
-    then
-        echo "gentoo"
-    elif [[ -a "/etc/debian_version" ]]
-    then
-        echo "debian"
-    fi
-}
-
-ad()
-{
-    arch
-    dist
-}
-
-# Change keyboard layout to us
-ao()
-{
-    setxkbmap -layout us
-}
-
-# Change keyboard layout to dvorak
-qw()
-{
-    setxkbmap -layout dvorak
-} 
+# Source Functions
+source $FUNCTIONS
 
 
 # Set title on terminal
@@ -111,11 +83,10 @@ esac
 export EDITOR=${EDITOR:-/bin/emacs}
 export PAGER=${PAGER:-/usr/bin/less}
 
-
-# Add build tools home paths and add then to the path
-export WINEDEBUG=-all
-export GRAILS_HOME=/home/ckoch/grails-1.2.1
-export JAVA_HOME=/opt/icedtea-bin-6.1.11.4
-export STS_HOME=/home/ckoch/springsource/sts-3.1.0.RELEASE
-export STS_GG_HOME=/home/ckoch/springsource_groovy_grails/ggts-3.1.0.RELEASE
-export PATH=${PATH}:${GRAILS_HOME}/bin:${STS_HOME}:${STS_GG_HOME}
+# source work related settings
+if [[ -a $WORK ]]
+then
+    source $WORK
+else
+    echo "Not at work."
+fi
