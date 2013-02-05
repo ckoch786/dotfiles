@@ -5,6 +5,12 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
 )
 
+
+(require 'auto-complete-config)
+(ac-config-default)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+
+
 (tool-bar-mode -1)
 
 ; add community maintained repos
