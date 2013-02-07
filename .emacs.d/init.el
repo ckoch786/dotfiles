@@ -1,16 +1,26 @@
+; Load packages from repos
+(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/plugins/" )
 ;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
+
+; Start server so that all new instances of Emacs will use this instance
 (server-start)
+
+; Load solarized color themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
 )
 
+; bind M p to auto-complete
+(global-set-key "\M-p" 'auto-complete)
 
+; Start autocomplete mode
 (require 'auto-complete-config)
 (ac-config-default)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 
 
+; Hide tool bar
 (tool-bar-mode -1)
 
 ; add community maintained repos
