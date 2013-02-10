@@ -54,6 +54,8 @@ alias greps="grep -IR --color=yes -D skip --exclude-dir=.git"
 alias la="ls -A --color=auto -h --group-directories-first"
 alias ll="ls -lA --color=auto -h  --group-directories-first"
 alias ls="ls --color=auto   --group-directories-first"
+alias shelves="svn ls -v svn://10.1.10.8/sls/shelves/ckoch"
+
 
 # Fix the behavior of  M-b and M-f 
 export WORDCHARS=''
