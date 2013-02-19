@@ -6,6 +6,8 @@ HISTSIZE=10000
 SAVEHIST=10000
 WORK=~/.zsh_work
 FUNCTIONS=~/.zsh_functions
+COWER_COMPLETIONS=~/builds/cower/src/cower-8/zsh_completion
+
 setopt autocd extendedglob
 bindkey -e
 
@@ -43,6 +45,15 @@ compctl -g "*.ods" localc
 compctl -g "*.doc *.odt" libreoffice writer
 compctl -g "*.ods" libreoffice calc
 
+# Source other completions
+if [[ -a $COWER_COMPLETIONS ]]
+then
+    source $COWER_COMPLETIONS
+else
+    echo "Cower completions DNE at $COWER_COMPLETIONS"
+fi
+
+
 # Traverse completions with keyboard
 zstyle ':completion:*' menu select 
 
@@ -55,7 +66,7 @@ alias la="ls -A --color=auto -h --group-directories-first"
 alias ll="ls -lA --color=auto -h  --group-directories-first"
 alias ls="ls --color=auto   --group-directories-first"
 alias shelves="svn ls -v svn://10.1.10.8/sls/shelves/ckoch"
-
+alias pacman='PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@'
 
 # Fix the behavior of  M-b and M-f 
 export WORDCHARS=''
@@ -82,8 +93,11 @@ case $TERM in
 esac
 
 # Set environment variables
-export EDITOR=${EDITOR:-/bin/emacs}
+export VISUAL="emacs -nw"
+export DISPLAY=':0.0'
+export EDITOR=${EDITOR:-/bin/emacsclient}
 export PAGER=${PAGER:-/usr/bin/less}
+
 
 # source work related settings
 if [[ -a $WORK ]]
