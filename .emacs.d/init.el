@@ -39,6 +39,15 @@
 (global-set-key (kbd "C-x r v") 'list-register)
 
 
+; C/C++ settings
+(setq c-default-style "linux"
+      c-basic-offset 2)
+
+(show-paren-mode 1)
+(column-number-mode 1)
+
+(require 'gccsense)
+(setq flymake-log-level 3)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
