@@ -11,6 +11,11 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
 )
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;enable column numbers
+(column-number-mode 1)
+
 ; bind M p to auto-complete
 (global-set-key "\M-p" 'auto-complete)
 
@@ -37,6 +42,13 @@
 ; add bindings for register browser
 (require 'list-register)
 (global-set-key (kbd "C-x r v") 'list-register)
+
+; Change major mode 
+(setq auto-mode-alist
+  (append
+    '(("\\.groovy$" . java-mode)
+      ("\\.m$" . octave-mode))
+    auto-mode-alist))
 
 
 ; C/C++ settings
