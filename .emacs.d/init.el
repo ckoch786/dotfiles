@@ -16,6 +16,9 @@
 ;enable column numbers
 (column-number-mode 1)
 
+
+(defalias 'list-buffers 'ibuffer)
+
 ; bind M p to auto-complete
 (global-set-key "\M-p" 'auto-complete)
 
