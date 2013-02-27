@@ -1,0 +1,32 @@
+;; Object nlds_project1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "nlds_project1/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 8])
+            ("CFLAGS" variable (:default-value ("-Wall" "-pedantic" "-g")) nil [8 34])
+            ("INCLUDES" variable (:default-value ("-Ilib")) nil [34 50])
+            ("LDFLAGS" variable nil nil [50 59])
+            ("SOURCES" variable (:default-value ("src/main.cpp" "src/City.cpp")) nil [59 93])
+            ("OBJECTS" variable (:default-value ("$(SOURCES:.cpp=.o)")) nil [93 120])
+            ("MAIN" variable (:default-value ("main")) nil [141 153])
+            ("ODIR" variable (:default-value ("bin")) nil [154 163])
+            ("all" function (:arguments ("$(MAIN)")) nil [304 317])
+            ("$(MAIN)" function (:arguments ("$(OBJECTS)")) nil [318 389])
+            (".cpp.o" function nil nil [391 441])
+            ("clean" function nil nil [442 471])
+            ("depend" function (:arguments ("$(SOURCES)")) nil [472 518])
+            ("check-syntax" function nil nil [519 533]))          
+    :file "Makefile"
+    :pointmax 625
+    :fsize 624
+    :lastmodtime '(20777 31961)
+    :unmatched-syntax '((semantic-list 560 . 573) (punctuation 559 . 560) (symbol 556 . 558) (symbol 547 . 555) (symbol 544 . 546) (semantic-list 539 . 543) (punctuation 538 . 539) (bol 533 . 533) (semantic-list 556 . 569) (punctuation 555 . 556) (symbol 552 . 554) (symbol 547 . 551) (symbol 544 . 546) (semantic-list 539 . 543) (punctuation 538 . 539) (bol 533 . 533) (semantic-list 555 . 568) (punctuation 554 . 555) (symbol 551 . 553) (symbol 547 . 550) (symbol 544 . 546) (semantic-list 539 . 543) (punctuation 538 . 539) (bol 533 . 533) (semantic-list 550 . 563) (punctuation 549 . 550) (symbol 546 . 548) (symbol 542 . 545) (symbol 539 . 541) (bol 533 . 533) (semantic-list 553 . 566) (punctuation 552 . 553) (symbol 549 . 551) (symbol 545 . 548) (symbol 542 . 544) (symbol 538 . 541) (bol 533 . 533) (semantic-list 553 . 566) (punctuation 552 . 553) (symbol 549 . 551) (symbol 545 . 548) (symbol 542 . 544) (symbol 538 . 541) (bol 533 . 533) (semantic-list 553 . 566) (punctuation 552 . 553) (symbol 549 . 551) (symbol 545 . 548) (symbol 542 . 544) (symbol 538 . 541) (bol 533 . 533) (symbol 566 . 567) (semantic-list 553 . 566) (punctuation 552 . 553) (symbol 549 . 551) (symbol 545 . 548) (symbol 542 . 544) (symbol 538 . 541) (bol 533 . 533) (semantic-list 553 . 566) (punctuation 552 . 553) (symbol 549 . 551) (symbol 545 . 548) (symbol 542 . 544) (symbol 538 . 541) (bol 533 . 533))
+    )
+   )
+  :file "!home!cory!Documents!Spring2013!eecs1580!Project2!nlds_project1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
