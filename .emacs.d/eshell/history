@@ -1,0 +1,52 @@
+ll
+ls
+la
+ls -a
+ls -l
+htop 
+top
+alias 'll 'ls -l $*
+ll
+alias 'll 'ls -l
+ll
+alias ll 'ls -l $*'
+ll
+ll
+ll
+alias la 'ls -a $*'
+la
+ll
+la
+..
+ll
+..
+ll
+..
+..
+..
+..
+ll
+ra
+la
+cd Documents/spring2013/
+cd eecs1580/Project2/nlds_project1/src/
+..
+ll
+make
+ll
+la
+l
+alias l 'ls $*'
+l
+cd /var/
+ll
+id
+popd
+cd $OLDPWD
+ll
+ll
+ll
+ll
+..
+rr
+ll

@@ -2,6 +2,7 @@
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/plugins/" )
+(load "~/.emacs.d/scripts/eshell-customizations.el")
 ;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
 
 ; Start server so that all new instances of Emacs will use this instance
@@ -45,6 +46,7 @@
 ; add bindings for register browser
 (require 'list-register)
 (global-set-key (kbd "C-x r v") 'list-register)
+
 
 ; Change major mode 
 (setq auto-mode-alist

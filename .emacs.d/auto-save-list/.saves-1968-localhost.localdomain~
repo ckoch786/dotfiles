@@ -1,3 +1,5 @@
+/home/cory/dotfiles/.gitignore
+/home/cory/dotfiles/#.gitignore#
 /home/cory/dotfiles/.emacs.d/init.el
 /home/cory/dotfiles/.emacs.d/#init.el#
 /home/cory/Documents/Spring2013/eecs1580/Project2/string_LL/main.cpp

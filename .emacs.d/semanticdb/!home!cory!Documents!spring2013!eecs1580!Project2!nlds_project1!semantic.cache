@@ -1,0 +1,32 @@
+;; Object nlds_project1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "nlds_project1/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("CC" variable (:default-value ("g++")) nil [1 8])
+            ("CFLAGS" variable (:default-value ("-Wall" "-pedantic" "-g")) nil [8 34])
+            ("INCLUDES" variable (:default-value ("-Ilib")) nil [34 50])
+            ("LDFLAGS" variable nil nil [50 59])
+            ("SOURCES" variable (:default-value ("src/main.cpp" "src/City.cpp" "src/LinkedList.cpp" "src/LinkedListElement.cpp" "src/Hash_Table.cpp" "src/HashEntry.cpp")) nil [59 175])
+            ("OBJECTS" variable (:default-value ("$(SOURCES:.cpp=.o)")) nil [175 202])
+            ("MAIN" variable (:default-value ("main")) nil [223 235])
+            ("ODIR" variable (:default-value ("bin")) nil [236 245])
+            ("all" function (:arguments ("$(MAIN)")) nil [386 399])
+            ("$(MAIN)" function (:arguments ("$(OBJECTS)")) nil [400 471])
+            (".cpp.o" function nil nil [473 523])
+            ("clean" function nil nil [524 553])
+            ("depend" function (:arguments ("$(SOURCES)")) nil [554 600])
+            ("check-syntax" function nil nil [601 652]))          
+    :file "Makefile"
+    :pointmax 685
+    :fsize 702
+    :lastmodtime '(20781 36173)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!cory!Documents!spring2013!eecs1580!Project2!nlds_project1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

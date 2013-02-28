@@ -1,0 +1,240 @@
+;; Object lib/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lib/"
+  :tables (list 
+   (semanticdb-table "LinkedListElement.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("__LINKEDLISTELEMENT_H__" variable (:constant-flag t) nil [41 64])
+            ("string" include (:system-flag t) nil [65 82])
+            ("City.h" include nil nil [83 100])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [102 122])
+            ("LinkedListElement" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [151 159])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [162 186])
+                    ("body" variable (:type ("City" type (:type "class") nil nil)) (reparse-symbol classsubparts) [189 199])
+                    ("public" label nil (reparse-symbol classsubparts) [200 207])
+                    ("LinkedListElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [210 231])
+                    ("LinkedListElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("body" variable (:type ("City" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [254 265]))                          
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [235 266])
+                    ("LinkedListElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("body" variable (:type ("City" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [288 298])
+                            ("next" variable
+                               (:pointer 1
+                                :type ("LinkedListElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [299 323]))                          
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [269 324])
+                    ("LinkedListElement" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("original" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LinkedListElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [346 380]))                          
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [327 381])
+                    ("LinkedListElement" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [384 405])
+                    ("getBody" function
+                       (:prototype-flag t
+                        :type ("City" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [408 423])
+                    ("getNext" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [426 455])
+                    ("setBody" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("body" variable (:type ("City" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [471 481]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [458 482])
+                    ("setNext" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("next" variable
+                               (:pointer 1
+                                :type ("LinkedListElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [498 522]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [485 523]))                  
+                :type "class")
+                nil [124 526]))          
+    :file "LinkedListElement.h"
+    :pointmax 535
+    :fsize 534
+    :lastmodtime '(20779 63626)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__LINKEDLISTELEMENT_H__")
+          )
+
+    )
+   (semanticdb-table "LinkedList.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("_LINKEDLIST_H" variable (:constant-flag t) nil [157 170])
+            ("iostream" include (:system-flag t) nil [172 191])
+            ("cstdlib" include (:system-flag t) nil [192 210])
+            ("LinkedListElement.h" include nil nil [211 241])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [242 262])
+            ("LinkedList" type
+               (:members 
+                  ( ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("ostr" variable
+                               (:reference 1
+                                :type ("ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [312 326])
+                            ("list" variable (:type ("LinkedList" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [327 343]))                          
+                        :type ("ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [284 344])
+                    ("private" label nil (reparse-symbol classsubparts) [346 354])
+                    ("current" variable
+                       (:pointer 1
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [357 398])
+                    ("tail" variable
+                       (:pointer 1
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [357 398])
+                    ("head" variable
+                       (:pointer 1
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [357 398])
+                    ("public" label nil (reparse-symbol classsubparts) [399 406])
+                    ("LinkedList" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [409 422])
+                    ("LinkedList" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("element" variable (:type ("LinkedListElement" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [437 463]))                          
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [426 464])
+                    ("LinkedList" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("original" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LinkedList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [478 505]))                          
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [467 506])
+                    ("LinkedList" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [509 523])
+                    ("isEmpty" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [531 552])
+                    ("atHead" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [555 575])
+                    ("atTail" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [578 598])
+                    ("gotoNext" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [601 617])
+                    ("gotoHead" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [620 636])
+                    ("gotoTail" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [639 655])
+                    ("getCurrent" function
+                       (:prototype-flag t
+                        :type ("LinkedListElement" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [658 689])
+                    ("+" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:constant-flag t
+                                :type ("LinkedListElement" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [722 750]))                          
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [700 751])
+                    ("+" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:constant-flag t
+                                :type ("LinkedList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [776 797]))                          
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [754 798])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:constant-flag t
+                                :type ("LinkedList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [823 844]))                          
+                        :type ("LinkedList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [801 845]))                  
+                :type "class")
+                nil [264 851]))          
+    :file "LinkedList.h"
+    :pointmax 882
+    :fsize 881
+    :lastmodtime '(20779 61862)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_LINKEDLIST_H")
+          )
+
+    )
+   )
+  :file "!home!cory!Documents!spring2013!eecs1580!Project2!nlds_project1!lib!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
