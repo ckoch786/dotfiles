@@ -74,6 +74,19 @@ export trunk="svn://10.1.10.8/sls/trunk"
 export shelf="svn://10.1.10.8/sls/shelves/ckoch"
 
 
+# Keyboard layout aliases
+
+# Change keyboard layout to us
+alias us="setxkbmap -layout us"
+
+# Change keyboard layout to dvorak
+alias dus="setxkbmap -layout dvorak"
+
+# Change keyboard layout to programmers dvorak
+alias dvp="setxkbmap -layout us -variant dvp"
+
+
+
 
 
 alias pacman='PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@'
@@ -108,7 +121,7 @@ esac
 export VISUAL="emacs -nw"
 export DISPLAY=':0.0'
 export EDITOR=${EDITOR:-/bin/emacsclient}
-export PAGER=${PAGER:-/usr/bin/less}
+export PAGER=${PAGER:-/usr/bin/less
 export BROWSER="google-chrome"
 
 # source work related settings
