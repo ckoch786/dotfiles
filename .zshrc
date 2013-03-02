@@ -121,7 +121,7 @@ esac
 export VISUAL="emacs -nw"
 export DISPLAY=':0.0'
 export EDITOR=${EDITOR:-/bin/emacsclient}
-export PAGER=${PAGER:-/usr/bin/less
+export PAGER=${PAGER:-/usr/bin/less}
 export BROWSER="google-chrome"
 
 # source work related settings
