@@ -50,7 +50,6 @@ ll
 ..
 rr
 ll
-..
 make
 ll
 cp Makefile ../../Trees/
@@ -122,3 +121,14 @@ make
 ./main 
 make
 ./main 
+cd .emacs.d/
+ll
+cd themes/
+ll
+ll emacs-color-theme-solarized/
+rm -r emacs-color-theme-solarized/
+git clone git@github.com:ckoch786/emacs-color-theme-solarized.git
+ll
+ll ~/.emacs.d/scripts/eshell-customizations.el 
+cat ~/.emacs.d/scripts/eshell-customizations.el 
+
