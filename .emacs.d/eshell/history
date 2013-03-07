@@ -60,3 +60,8 @@ git clone git@github.com:ckoch786/emacs-color-theme-solarized.git
 ll
 ll ~/.emacs.d/scripts/eshell-customizations.el 
 cat ~/.emacs.d/scripts/eshell-customizations.el 
+ll
+cd
+cd dotfiles/
+ll
+ll

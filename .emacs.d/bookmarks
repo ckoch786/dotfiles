@@ -1,0 +1,21 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+((#("eecs1580" 0 1
+   (icicle-mode-line-help "File `~/Documents/Spring2013/eecs1580/', position 181" help-echo "File `~/Documents/Spring2013/eecs1580/', position 181")
+   1 8
+   (help-echo "File `~/Documents/Spring2013/eecs1580/', position 181"))
+ (filename . "~/Documents/Spring2013/eecs1580/")
+ (front-context-string . "..\n  drwxrwxr-x ")
+ (rear-context-string . "96 Feb 24 19:59 ")
+ (position . 181))
+(#("eecs1580<2>" 0 1
+   (icicle-mode-line-help "File `~/Documents/Spring2013/eecs1580/', position 181" help-echo "File `~/Documents/Spring2013/eecs1580/', position 181")
+   1 11
+   (help-echo "File `~/Documents/Spring2013/eecs1580/', position 181"))
+ (filename . "~/Documents/Spring2013/eecs1580/")
+ (front-context-string . "..\n  drwxrwxr-x ")
+ (rear-context-string . "96 Feb 24 19:59 ")
+ (position . 181))
+)

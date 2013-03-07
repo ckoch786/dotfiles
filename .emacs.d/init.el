@@ -1,16 +1,34 @@
+
 ; Load packages from repos
 (package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/plugins/" )
+(load "~/.emacs.d/scripts/cedet-customizations.el")
 (load "~/.emacs.d/scripts/eshell-customizations.el")
 ;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
+;(load "init-smartparens")
+(require 'smartparens-config)
+(smartparens-global-mode 1)
+(yas-global-mode 1)
+(erc-select)
+(icy-mode 1)
+(recentf-mode 1) ; keep a list of recently opened files
+;(require 'ido)
+;(ido-mode t)
 
 ; Start server so that all new instances of Emacs will use this instance
 (server-start)
 
+; show time/date and system load in mode line
+(display-time-mode 1)
+
 ; Load solarized color themes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
 )
+(load-theme 'solarized-light)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -30,7 +48,7 @@
 
 
 ; Hide tool bar
-(tool-bar-mode -1)
+(tool-bar-mode 1)
 
 ; add community maintained repos
 (require 'package)
@@ -70,7 +88,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default))))
+ '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+ '(erc-nick "\"ckoch786\" \"ckoch786_\" \"ckoch786__\"")
+ '(erc-user-full-name "\"Cory Koch\"")
+ '(ido-enable-flex-matching t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

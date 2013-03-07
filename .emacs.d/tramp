@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <13/02/23 21:48:28 /home/cory/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/03/05 12:09:38 /home/cory/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -24,27 +24,24 @@
   ("remote-encoding" "mimencode -b")
   ("remote-decoding" "mimencode -u -b")
   ("uid-integer" 774))
- (["sudo" "root" "localhost" nil]
-  ("uname" "Linux 3.7.9-1-ARCH")
+ (["su" "root" "localhost.localdomain" nil]
+  ("uname" "Linux 3.7.8-202.fc18.x86_64")
   ("test" "test")
   ("remote-path"
    ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
   ("remote-shell" "/bin/sh")
   ("busybox" nil)
   ("file-exists" "test -e")
-  ("~root" "/root")
+  ("readlink" "\\readlink")
+  ("stat" "\\stat")
+  ("id" "/bin/id")
+  ("gid-integer" 0)
+  ("uid-integer" 0)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
-  ("readlink" "\\readlink")
-  ("stat" "\\stat")
-  ("id" "/usr/bin/id")
-  ("gid-integer" 0)
-  ("uid-integer" 0)
   ("ls" "/bin/ls --color=never")
   ("local-encoding" base64-encode-region)
   ("local-decoding" base64-decode-region)
   ("remote-encoding" "base64")
-  ("remote-decoding" "base64 -d -i")
-  ("inline-compress" "gzip")
-  ("inline-decompress" "gzip -d")))
+  ("remote-decoding" "base64 -d -i")))

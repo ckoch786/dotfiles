@@ -1,0 +1,62 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "ede-projects.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "ede-projects.el"
+      :pointmax 86
+      :fsize 85
+      :lastmodtime '(20790 10532)
+      :unmatched-syntax nil)
+    (semanticdb-table "init.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("package-initialize" code nil nil [29 49])
+            ("add-to-list" code nil nil [50 146])
+            ("add-to-list" code nil nil [148 186])
+            ("add-to-list" code nil nil [187 234])
+            ("load" code nil nil [235 286])
+            ("load" code nil nil [287 339])
+            ("smartparens-config" include nil nil [439 468])
+            ("smartparens-global-mode" code nil nil [469 496])
+            ("yas-global-mode" code nil nil [497 516])
+            ("erc-select" code nil nil [517 529])
+            ("icy-mode" code nil nil [530 542])
+            ("recentf-mode" code nil nil [543 559])
+            ("server-start" code nil nil [703 717])
+            ("display-time-mode" code nil nil [765 786])
+            ("add-to-list" code nil nil [818 904])
+            ("load-theme" code nil nil [905 934])
+            ("defalias" code nil nil [936 969])
+            ("column-number-mode" code nil nil [994 1016])
+            ("defalias" code nil nil [1019 1052])
+            ("global-set-key" code nil nil [1082 1120])
+            ("auto-complete-config" include nil nil [1148 1179])
+            ("ac-config-default" code nil nil [1180 1199])
+            ("add-to-list" code nil nil [1200 1261])
+            ("tool-bar-mode" code nil nil [1280 1297])
+            ("package" include nil nil [1332 1350])
+            ("add-to-list" code nil nil [1351 1450])
+            ("package-initialize" code nil nil [1451 1471])
+            ("when" code nil nil [1511 1599])
+            ("list-register" include nil nil [1637 1661])
+            ("global-set-key" code nil nil [1662 1709])
+            ("setq" code nil nil [1733 1850])
+            ("setq" code nil nil [1870 1923])
+            ("show-paren-mode" code nil nil [1925 1944])
+            ("column-number-mode" code nil nil [1945 1967])
+            ("gccsense" include nil nil [1969 1988])
+            ("setq" code nil nil [1989 2015])
+            ("custom-set-variables" code nil nil [2016 2563])
+            ("custom-set-faces" code nil nil [2564 2803]))          
+      :file "init.el"
+      :pointmax 2804
+      :fsize 2803
+      :lastmodtime '(20790 11130)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
