@@ -1,4 +1,16 @@
 *~
+#*#	
+.#.*
 .emacs.d/elpa/
 .emacs.d/auto-save-list
 .emacs.d/url
+.emacs.d/eshell/lastdir
+.emacs.d/eshell/history
+.emacs.d/semanticdb 
+.emacs.d/auto-save-list
+.emacs.d/url
+.emacs.d/plugins
+.emacs.d/org
+.emacs.d/session.*
+.emacs.d/tramp
+.emacs.d/ac-comphist.dat

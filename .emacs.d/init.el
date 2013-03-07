@@ -26,9 +26,13 @@
 (display-time-mode 1)
 
 ; Load solarized color themes
+<<<<<<< HEAD
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
 )
 (load-theme 'solarized-light)
+=======
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+>>>>>>> 91153066c2b6f97e1ac2214965864988d199df0b
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -65,6 +69,8 @@
 (require 'list-register)
 (global-set-key (kbd "C-x r v") 'list-register)
 
+(defalias 'list-buffers 'ibuffer) ; always use ibuffer
+
 
 ; Change major mode 
 (setq auto-mode-alist
@@ -89,9 +95,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
+<<<<<<< HEAD
  '(erc-nick "\"ckoch786\" \"ckoch786_\" \"ckoch786__\"")
  '(erc-user-full-name "\"Cory Koch\"")
  '(ido-enable-flex-matching t))
+=======
+ '(org-mobile-files (quote (org-agenda-files "" "~/.emacs/org"))))
+>>>>>>> 91153066c2b6f97e1ac2214965864988d199df0b
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

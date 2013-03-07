@@ -50,6 +50,77 @@ ll
 ..
 rr
 ll
+make
+ll
+cp Makefile ../../Trees/
+make
+make
+make
+make
+make
+make
+make
+ll
+ll
+make
+l
+make 
+make 
+make 
+make 
+make 
+ll ..
+ll ../..
+ll ../../..
+ll ../../..
+make
+make
+make
+make
+make
+make
+make
+make
+./main 
+./main 
+make
+make
+./main 
+./main 
+make
+make
+make
+make
+make
+make
+make
+make
+./main 
+make
+make
+make
+make
+./main 
+make
+./main 
+make
+./main 
+make
+make
+./main 
+make
+./main 
+make
+./main 
+make
+./main 
+make
+./main 
+make
+./main 
+./main 
+make
+./main 
 cd .emacs.d/
 ll
 cd themes/
@@ -60,8 +131,12 @@ git clone git@github.com:ckoch786/emacs-color-theme-solarized.git
 ll
 ll ~/.emacs.d/scripts/eshell-customizations.el 
 cat ~/.emacs.d/scripts/eshell-customizations.el 
+<<<<<<< HEAD
 ll
 cd
 cd dotfiles/
 ll
 ll
+=======
+
+>>>>>>> 91153066c2b6f97e1ac2214965864988d199df0b
