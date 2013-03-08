@@ -13,11 +13,11 @@
 (require 'smartparens-config)
 (smartparens-global-mode 1)
 (yas-global-mode 1)
-(erc-select)
-(icy-mode 1)
+;;(erc-select)
+;;(icy-mode 1)
 (recentf-mode 1) ; keep a list of recently opened files
-;(require 'ido)
-;(ido-mode t)
+(require 'ido)
+(ido-mode t)
 
 ; Start server so that all new instances of Emacs will use this instance
 (server-start)
@@ -26,20 +26,16 @@
 (display-time-mode 1)
 
 ; Load solarized color themes
-<<<<<<< HEAD
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
-)
-(load-theme 'solarized-light)
-=======
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
->>>>>>> 91153066c2b6f97e1ac2214965864988d199df0b
+(load-theme 'solarized-light)
+
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;enable column numbers
 (column-number-mode 1)
 
-
+(global-set-key (kbd "M-/") 'hippie-expand)
 (defalias 'list-buffers 'ibuffer)
 
 ; bind M p to auto-complete
@@ -95,13 +91,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
-<<<<<<< HEAD
  '(erc-nick "\"ckoch786\" \"ckoch786_\" \"ckoch786__\"")
  '(erc-user-full-name "\"Cory Koch\"")
  '(ido-enable-flex-matching t))
-=======
  '(org-mobile-files (quote (org-agenda-files "" "~/.emacs/org"))))
->>>>>>> 91153066c2b6f97e1ac2214965864988d199df0b
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
