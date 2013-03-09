@@ -1,0 +1,44 @@
+;; Object powerline-20130224.517/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "powerline-20130224.517/"
+  :tables
+  (list
+    (semanticdb-table "powerline-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("powerline-hud" function (:prototype-flag t) nil [368 453])
+            ("powerline-mouse" function (:prototype-flag t) nil [455 544])
+            ("powerline-concat" function (:prototype-flag t) nil [546 664])
+            ("defpowerline" function (:prototype-flag t) nil [666 742])
+            ("powerline-raw" function (:prototype-flag t) nil [744 824])
+            ("powerline-fill" function (:prototype-flag t) nil [826 897])
+            ("defpowerline" code nil nil [899 1396])
+            ("defpowerline" code nil nil [1398 2007])
+            ("defpowerline" code nil nil [2009 2408])
+            ("defpowerline" code nil nil [2410 2532])
+            ("defpowerline" code nil nil [2534 2790])
+            ("defpowerline" code nil nil [2792 2877])
+            ("defpowerline" code nil nil [2879 3005])
+            ("powerline-center-theme" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3007 3133])
+            ("fset" code nil nil [3135 3191])
+            ("powerline-default-theme" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3193 3284])
+            ("fset" code nil nil [3286 3336])
+            ("powerline-nano-theme" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [3338 3428])
+            ("powerline-autoloads" package nil nil [3518 3548]))          
+      :file "powerline-autoloads.el"
+      :pointmax 3705
+      :fsize 3704
+      :lastmodtime '(20795 25460)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!powerline-20130224.517!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

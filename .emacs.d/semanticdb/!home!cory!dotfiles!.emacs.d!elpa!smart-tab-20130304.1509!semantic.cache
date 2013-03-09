@@ -1,0 +1,27 @@
+;; Object smart-tab-20130304.1509/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "smart-tab-20130304.1509/"
+  :tables
+  (list
+    (semanticdb-table "smart-tab-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("smart-tab" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [238 890])
+            ("smart-tab-mode-on" function (:prototype-flag t) nil [892 978])
+            ("smart-tab-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [980 1231])
+            ("global-smart-tab-mode-enable-in-buffers" function (:prototype-flag t) nil [1233 1296])
+            ("smart-tab-autoloads" package nil nil [1386 1416]))          
+      :file "smart-tab-autoloads.el"
+      :pointmax 1573
+      :fsize 1572
+      :lastmodtime '(20795 25862)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!smart-tab-20130304.1509!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

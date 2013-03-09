@@ -1,0 +1,35 @@
+;; Object ido-ubiquitous-20121214.2145/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ido-ubiquitous-20121214.2145/"
+  :tables
+  (list
+    (semanticdb-table "ido-ubiquitous-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("let" code nil nil [432 592])
+            ("ido-ubiquitous-mode" variable nil nil [594 907])
+            ("custom-autoload" code nil nil [909 968])
+            ("ido-ubiquitous-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [970 1532])
+            ("define-obsolete-variable-alias" code nil nil [1534 1609])
+            ("define-obsolete-function-alias" code nil nil [1611 1686])
+            ("ido-ubiquitous-command-exceptions" variable (:default-value (quote nil)) nil [1688 2333])
+            ("custom-autoload" code nil nil [2335 2406])
+            ("define-obsolete-variable-alias" code nil nil [2408 2508])
+            ("ido-ubiquitous-function-exceptions" variable (:default-value (quote (grep-read-files))) nil [2510 2953])
+            ("custom-autoload" code nil nil [2955 3029])
+            ("ido-ubiquitous-command-compatibility-exceptions" variable (:default-value (quote nil)) nil [3031 3534])
+            ("custom-autoload" code nil nil [3536 3621])
+            ("ido-ubiquitous-function-compatibility-exceptions" variable (:default-value (quote nil)) nil [3623 4120])
+            ("custom-autoload" code nil nil [4122 4210])
+            ("ido-ubiquitous-autoloads" package nil nil [4313 4348]))          
+      :file "ido-ubiquitous-autoloads.el"
+      :pointmax 4510
+      :fsize 4509
+      :lastmodtime '(20795 25956)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!ido-ubiquitous-20121214.2145!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
