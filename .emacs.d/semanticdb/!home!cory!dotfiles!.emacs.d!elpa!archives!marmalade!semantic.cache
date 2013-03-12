@@ -7,9 +7,9 @@
       :major-mode 'emacs-lisp-mode
       :tags nil
       :file "archive-contents"
-      :pointmax 61818
-      :fsize 61819
-      :lastmodtime '(20795 26493)
+      :pointmax 62165
+      :fsize 62166
+      :lastmodtime '(20798 24700)
       :unmatched-syntax nil))
   :file "!home!cory!dotfiles!.emacs.d!elpa!archives!marmalade!semantic.cache"
   :semantic-tag-version "2.0"

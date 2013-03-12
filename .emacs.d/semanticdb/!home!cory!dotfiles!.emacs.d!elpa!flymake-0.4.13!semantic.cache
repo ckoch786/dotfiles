@@ -1,0 +1,24 @@
+;; Object flymake-0.4.13/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "flymake-0.4.13/"
+  :tables
+  (list
+    (semanticdb-table "flymake-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("flymake-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [256 510])
+            ("flymake-mode-on" function (:prototype-flag t) nil [512 590])
+            ("flymake-mode-off" function (:prototype-flag t) nil [592 672])
+            ("flymake-find-file-hook" function (:prototype-flag t) nil [674 738])
+            ("flymake-autoloads" package nil nil [826 854]))          
+      :file "flymake-autoloads.el"
+      :pointmax 1009
+      :fsize 1008
+      :lastmodtime '(20782 10185)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!flymake-0.4.13!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,23 @@
+;; Object nsis-mode-0.44/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "nsis-mode-0.44/"
+  :tables
+  (list
+    (semanticdb-table "nsis-mode-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("setq" code nil nil [197 286])
+            ("setq" code nil nil [288 377])
+            ("nsis-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [379 463])
+            ("nsis-mode-autoloads" package nil nil [552 582]))          
+      :file "nsis-mode-autoloads.el"
+      :pointmax 739
+      :fsize 738
+      :lastmodtime '(20795 45568)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!nsis-mode-0.44!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,25 @@
+;; Object groovy-mode-20120510.1755/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "groovy-mode-20120510.1755/"
+  :tables
+  (list
+    (semanticdb-table "groovy-mode-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [232 292])
+            ("groovy-mode-hook" variable (:user-visible-flag t) nil [294 358])
+            ("custom-autoload" code nil nil [360 411])
+            ("groovy-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [413 638])
+            ("add-to-list" code nil nil [640 703])
+            ("groovy-mode-autoloads" package nil nil [795 827]))          
+      :file "groovy-mode-autoloads.el"
+      :pointmax 986
+      :fsize 985
+      :lastmodtime '(20795 45726)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!groovy-mode-20120510.1755!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

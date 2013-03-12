@@ -7,9 +7,9 @@
       :major-mode 'emacs-lisp-mode
       :tags nil
       :file ".loaddefs.el"
-      :pointmax 217
-      :fsize 1996
-      :lastmodtime '(20795 26178)
+      :pointmax 2065
+      :fsize 2817
+      :lastmodtime '(20795 45309)
       :unmatched-syntax nil))
   :file "!home!cory!dotfiles!.emacs.d!el-get!semantic.cache"
   :semantic-tag-version "2.0"

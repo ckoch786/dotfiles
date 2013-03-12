@@ -1,0 +1,33 @@
+;; Object visible-mark-20080221.651/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "visible-mark-20080221.651/"
+  :tables
+  (list
+    (semanticdb-table "visible-mark-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("visible-mark-autoloads" package nil nil [193 226]))          
+      :file "visible-mark-autoloads.el"
+      :pointmax 386
+      :fsize 385
+      :lastmodtime '(20798 23858)
+      :unmatched-syntax nil)
+    (semanticdb-table "visible-mark.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "visible-mark.el"
+      :pointmax 4859
+      :fsize 4860
+      :lastmodtime '(20798 23858)
+      :unmatched-syntax nil)
+    (semanticdb-table "visible-mark-pkg.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "visible-mark-pkg.el"
+      :pointmax 97
+      :fsize 96
+      :lastmodtime '(20798 23858)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!visible-mark-20080221.651!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

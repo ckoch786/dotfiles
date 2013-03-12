@@ -1,0 +1,29 @@
+;; Object scripts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "scripts/"
+  :tables
+  (list
+
+
+    (semanticdb-table "eshell-customizations.el~"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("setq" code nil nil [1 32])
+            ("setq" code nil nil [33 75])
+            ("load" code nil nil [77 93])
+            ("if" code nil nil [138 221])
+            ("if" code nil nil [318 405])
+            ("eshell/ef" function (:arguments ("fname-regexp" "dir")) nil [503 581])
+            ("pwd-repl-home" function (:arguments ("pwd")) nil [612 874])
+            ("curr-dir-git-branch-string" function
+               (:user-visible-flag t
+                :arguments ("pwd"))
+                nil [876 1478])
+            ("setq" code nil nil [1480 2297])
+            ("setq" code nil nil [2299 2333]))          
+      :file "eshell-customizations.el~"
+      :pointmax 2334
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!scripts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

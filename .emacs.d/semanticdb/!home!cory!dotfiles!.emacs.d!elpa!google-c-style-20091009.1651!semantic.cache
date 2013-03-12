@@ -1,0 +1,17 @@
+;; Object google-c-style-20091009.1651/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "google-c-style-20091009.1651/"
+  :tables
+  (list
+    (semanticdb-table "google-c-style-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("google-c-style-autoloads" package nil nil [199 234]))          
+      :file "google-c-style-autoloads.el"
+      :pointmax 396
+      :fsize 395
+      :lastmodtime '(20795 45122)
+      :unmatched-syntax nil))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!google-c-style-20091009.1651!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

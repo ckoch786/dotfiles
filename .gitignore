@@ -14,3 +14,4 @@
 .emacs.d/session.*
 .emacs.d/tramp
 .emacs.d/ac-comphist.dat
+.emacs.d/emacs-custom.el

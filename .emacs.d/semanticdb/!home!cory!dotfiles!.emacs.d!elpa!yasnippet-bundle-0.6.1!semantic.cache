@@ -1,0 +1,28 @@
+;; Object yasnippet-bundle-0.6.1/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "yasnippet-bundle-0.6.1/"
+  :tables
+  (list
+    (semanticdb-table "yasnippet-bundle-autoloads.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("yas/root-directory" variable nil nil [257 625])
+            ("custom-autoload" code nil nil [627 687])
+            ("yas/minor-mode" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [689 1126])
+            ("yasnippet-bundle" include nil nil [1127 1154])
+            ("yasnippet-bundle-autoloads" package nil nil [1259 1296]))          
+      :file "yasnippet-bundle-autoloads.el"
+      :pointmax 1460
+      :fsize 1459
+      :lastmodtime '(20795 55433)
+      :unmatched-syntax nil)
+    (semanticdb-table "yasnippet-bundle.el"
+      :file "yasnippet-bundle.el"
+      :fsize 213004
+      :lastmodtime '(20795 55433)))
+  :file "!home!cory!dotfiles!.emacs.d!elpa!yasnippet-bundle-0.6.1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
