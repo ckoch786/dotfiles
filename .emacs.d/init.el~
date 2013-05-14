@@ -1,97 +1,72 @@
+;;; init.el -- CKoch's configuration file
+;;
+;;
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-; Load packages from repos
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/.emacs.d/plugins/" )
-(load "~/.emacs.d/scripts/cedet-customizations.el")
-(load "~/.emacs.d/scripts/eshell-customizations.el")
-;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file.el" )
-;(load "init-smartparens")
-(require 'smartparens-config)
-(smartparens-global-mode t)
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
-(erc-select)
-(icy-mode 1)
-;(require 'ido)
-;(ido-mode t)
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 
-; Start server so that all new instances of Emacs will use this instance
-(server-start)
+(setq el-get-sources
+      '((:name browse-kill-ring
+	       :after (progn
+			(browse-kill-ring-default-keybindings)))
 
-; show time/date and system load in mode line
-(display-time-mode 1)
+	(:name list-register
+	       :after (progn
+			(global-set-key (kbd "C-x r v") 'list-register)))
 
-; Load solarized color themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized"
-)
+	(:name auto-complete
+	       :after (progn
+			(global-set-key "\M-p" 'auto-complete)))))
+			;; Start autocomplete mode
+			;;(require 'auto-complete-config)
+			;;(ac-config-default)
+			;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")))))
 
-(defalias 'yes-or-no-p 'y-or-n-p)
+	;; (:name smartparens
+	;;        :after (progn
+	;; 		;;(load "init-smartparens")
+	;; 		(require 'smartparens-config)
+	;; 		(smartparens-global-mode t)))))
 
-;enable column numbers
-(column-number-mode 1)
-
-
-(defalias 'list-buffers 'ibuffer)
-
-; bind M p to auto-complete
-(global-set-key "\M-p" 'auto-complete)
-
-; Start autocomplete mode
-(require 'auto-complete-config)
-(ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-
-
-; Hide tool bar
-(tool-bar-mode -1)
-
-; add community maintained repos
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+(setq my-packages
+      (append
+       ;; missing recipes: w3m jedi groovy-mode gccsense flymake epc emacs-eclim dash ctable  concurrent company
+       `(yasnippet visible-mark smex smart-tab 
+		    popup nsis-mode  ido-ubiquitous icicles haskell-mode 
+		    google-c-style fuzzy-match fuzzy deferred color-theme-solarized)
+       ;; Takes to long check recipe:  ecb
+       (mapcar 'el-get-source-name el-get-sources)))
+(el-get 'sync my-packages)
 
 
-; add bindings for kill ring browser
-(when (require 'browse-kill-ring nil 'noerror)
-  (browse-kill-ring-default-keybindings))
-
-; add bindings for register browser
-(require 'list-register)
-(global-set-key (kbd "C-x r v") 'list-register)
 
 
-; Change major mode 
-(setq auto-mode-alist
-  (append
-    '(("\\.groovy$" . java-mode)
-      ("\\.m$" . octave-mode))
-    auto-mode-alist))
+;;    Here's a couple of examples of package recipes that are using
+;; `:before' and `:after' properties:
 
+;;        (:name asciidoc
+;;         :type elpa
+;;         :after (lambda ()
+;;            (autoload 'doc-mode "doc-mode" nil t)
+;;            (add-to-list 'auto-mode-alist '("\\.adoc$" . doc-mode))
+;;            (add-hook 'doc-mode-hook '(lambda ()
+;;                      (turn-on-auto-fill)
+;;                      (require 'asciidoc)))))
 
-; C/C++ settings
-(setq c-default-style "linux"
-      c-basic-offset 2)
+;;        (:name anything
+;;         :features anything-config
+;;         :before (global-set-key (kbd "M-s a") 'dim:anything-occur)
+;;         :after  (setq w3m-command nil))
 
-(show-paren-mode 1)
-(column-number-mode 1)
+;; TODO setup init-package.el to have elget byte compile the configs when neccessary?
+;; and loads the compiled version
+;; section 7.2
+;; TODO reread node 9 
 
-(require 'gccsense)
-(setq flymake-log-level 3)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" default)))
- '(erc-nick "\"ckoch786\" \"ckoch786_\" \"ckoch786__\"")
- '(erc-user-full-name "\"Cory Koch\"")
- '(ido-enable-flex-matching t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
