@@ -103,8 +103,10 @@ colors
 # Set prompt 
 autoload -U promptinit
 promptinit
+prompt -s adam2
+prompt_adam2_color4=black
 # Gentoo prompt 
-PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
+#PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
 #PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}% %B%F{red}# %b%f%k'
 
 # Source Functions
