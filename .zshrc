@@ -134,3 +134,5 @@ then
 else
     echo "Not at work."
 fi
+
+xmodmap ~/.xmodmaprc
