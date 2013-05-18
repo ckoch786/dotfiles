@@ -66,6 +66,7 @@ alias l='ls --color=auto'
 alias la="ls -A --color=auto -h --group-directories-first"
 alias ll="ls -lA --color=auto -h  --group-directories-first"
 alias ls="ls --color=auto   --group-directories-first"
+alias //="ls -lA --color=auto -h  --group-directories-first"
 
 # For work
 alias shelves="svn ls -v svn://10.1.10.8/sls/shelves/ckoch"
@@ -102,8 +103,10 @@ colors
 # Set prompt 
 autoload -U promptinit
 promptinit
+prompt -s adam2
+prompt_adam2_color4=black
 # Gentoo prompt 
-PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
+#PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
 #PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}% %B%F{red}# %b%f%k'
 
 # Source Functions
