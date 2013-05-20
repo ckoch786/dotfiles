@@ -15,11 +15,39 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 
+(defun install-packages ()
+  "Installs all packages that I use on all my boxen."
+  (interactive)
+  (package-refresh-contents)
+  (mapc '(lambda (package)
+	   (unless (package-installed-p package)
+	     (package-install package)))
+	'(browse-kill-ring
+	  magit
+	  smex
+	  smartparens
+	  color-theme-solarized
+	  company
+	  fuzzy
+	  ido-ubiquitous
+	  visible-mark
+	  nsis-mode
+	  ;;groovy-mode		       
+	  fuzzy-match
+	  ;;fuzzy-format
+	  dtrt-indent
+	  haskell-mode
+	  ecb
+	  emacs-eclim)))
+	  ;;list-registers)))
+	  
+
+(install-packages)
 
 
 ;;;; Load solarized color themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-(load-theme 'solarized-light)
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+;; (load-theme 'solarized-light)
 
 
 
@@ -110,7 +138,7 @@
 
 
 ;;;; yasnippets
-(yas-global-mode t)
+;;(yas-global-mode t)
 
 
 
@@ -174,14 +202,14 @@
 ;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
 ;; CEDET component (including EIEIO) gets activated by another 
 ;; package (Gnus, auth-source, ...).
-(load-file "/home/$USER/builds/cedet/cedet-devel-load.el")
+;; (load-file "/home/$USER/builds/cedet/cedet-devel-load.el")
 
-;; Add further minor-modes to be enabled by semantic-mode.
-;; See doc-string of `semantic-default-submodes' for other things
-;; you can use here.
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+;; ;; Add further minor-modes to be enabled by semantic-mode.
+;; ;; See doc-string of `semantic-default-submodes' for other things
+;; ;; you can use here.
+;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+;; (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 
 ;; Enable Semantic
 (semantic-mode t)
