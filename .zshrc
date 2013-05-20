@@ -1,5 +1,5 @@
 #TODO create and source separate files for home, school(green, lab, and ET),
-#     th1, aliases, custome completions
+#     th1, aliases, custom completions
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -9,6 +9,8 @@ FUNCTIONS=~/.zsh_functions
 COWER_COMPLETIONS=~/builds/cower/src/cower-8/zsh_completion
 
 setopt autocd extendedglob
+
+# Use Emacs like key bindings
 bindkey -e
 
 # The following lines were added by compinstall
@@ -59,6 +61,7 @@ zstyle ':completion:*' menu select
 
 # Aliases
 alias ls='ls --color=auto'
+alias cls="clear;ls -l"
 alias df="df -h"
 alias du="du -hs"
 alias greps="grep -IR --color=yes -D skip --exclude-dir=.git"
@@ -66,14 +69,15 @@ alias l='ls --color=auto'
 alias la="ls -A --color=auto -h --group-directories-first"
 alias ll="ls -lA --color=auto -h  --group-directories-first"
 alias ls="ls --color=auto   --group-directories-first"
+alias s="sudo"
 alias //="ls -lA --color=auto -h  --group-directories-first"
-
-# For work
-alias shelves="svn ls -v svn://10.1.10.8/sls/shelves/ckoch"
-export sls="svn://10.1.10.8/sls"
-export trunk="svn://10.1.10.8/sls/trunk"
-export shelf="svn://10.1.10.8/sls/shelves/ckoch"
-
+alias emacsnw="emacs -nw"
+alias emacsq="emacs -q"
+alias emacsnwq="emacs -nw -q"
+alias emerge="emerge -avt"
+alias rmr="rm -r"
+alias rmfr="rm -fr"
+alias tarxvf="tar -xvf"
 
 # Keyboard layout aliases
 

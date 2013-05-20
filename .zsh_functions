@@ -22,3 +22,7 @@ ad()
     dist
 }
 
+svn-diff()
+{
+    svn diff "${@}" | colordiff
+}
