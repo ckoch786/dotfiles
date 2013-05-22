@@ -49,6 +49,7 @@
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 ;; (load-theme 'solarized-light)
 
+(load-theme 'tango-dark)
 
 
 ;;;; Mode line settings
