@@ -26,3 +26,15 @@ svn-diff()
 {
     svn diff "${@}" | colordiff
 }
+
+a()
+{
+    dus
+    xmodmap ~/dotfiles_master/dotfiles/.xmodmaprc
+}
+
+svnm()
+{
+    svn --config-option=config:helpers:diff-cmd=meld $@
+}
+

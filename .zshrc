@@ -71,6 +71,7 @@ alias ll="ls -lA --color=auto -h  --group-directories-first"
 alias ls="ls --color=auto   --group-directories-first"
 alias s="sudo"
 alias //="ls -lA --color=auto -h  --group-directories-first"
+alias rr="ls -lA --color=auto -h  --group-directories-first"
 alias emacsnw="emacs -nw"
 alias emacsq="emacs -q"
 alias emacsnwq="emacs -nw -q"
@@ -78,6 +79,8 @@ alias emerge="emerge -avt"
 alias rmr="rm -r"
 alias rmfr="rm -fr"
 alias tarxvf="tar -xvf"
+# create a tar.gz
+alias tarpcvf="tar -pcvf"
 
 # Keyboard layout aliases
 
@@ -108,7 +111,7 @@ colors
 autoload -U promptinit
 promptinit
 prompt -s adam2
-prompt_adam2_color4=black
+#prompt_adam2_color4=black
 # Gentoo prompt 
 #PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}%# %b%f%k'
 #PROMPT=$'%B%F{green}%n@%m%k %B%F{blue}%1~ %B%F{blue}% %B%F{red}# %b%f%k'

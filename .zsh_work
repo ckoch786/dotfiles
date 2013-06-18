@@ -4,8 +4,9 @@ export GRAILS_HOME=/home/ckoch/grails-1.2.1
 export JAVA_HOME=/opt/jdk1.6.0_34
 export STS_HOME=/home/ckoch/springsource/sts-3.1.0.RELEASE
 export STS_GG_HOME=/home/ckoch/springsource_groovy_grails/ggts-3.1.0.RELEASE
+export ECLIPSE_HOME=/opt/eclipse
 export PATH=${PATH}:${GRAILS_HOME}/bin:${STS_HOME}:${STS_GG_HOME}
-export PATH=${PATH}:/home/ckoch/AT_patches/
+export PATH=${PATH}:/home/ckoch/AT_patches/:${ECLIPSE_HOME}
 
 alias s-st="svn st"
 alias s-co="svn co"
@@ -19,3 +20,5 @@ alias shelves="svn ls -v svn://10.1.10.8/sls/shelves/ckoch"
 export sls="svn://10.1.10.8/sls"
 export trunk="svn://10.1.10.8/sls/trunk"
 export shelf="svn://10.1.10.8/sls/shelves/ckoch"
+export branches="svn://10.1.10.8/sls/branches"
+export tde="${branches}/Extraction-Tool"
