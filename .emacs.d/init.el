@@ -69,7 +69,6 @@
 ;; (load-theme 'solarized-light)
 (load-theme 'tango-dark)
 
-
 ;;;; Completions
 ;; (setq completion-ignored-extensions `".o"',
 ;; `".elc"', and `"~"')
