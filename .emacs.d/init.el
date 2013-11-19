@@ -2,6 +2,7 @@
 ;;
 ;;
 (add-to-list 'load-path "~/.emacs.d/")
+;; TODO move all plugins to marmalade and add to install-packages
 (add-to-list 'load-path "~/.emacs.d/plugins/" )
 
 
@@ -42,23 +43,57 @@
 	  ;;list-registers)))
 	  
 
+;;;; TODO check for a network connection and only run this if there is connection.
+;;;; or have it fail after some amount of time and continue with initialization of emacs
 (install-packages)
 
+;;stumpwm-mode
+;; TODO add this to marmalade and switch to using that
+(load "~/repos/stumpwm-mode.el")
+(setq stumpwm-shell-program "stumpish")
 
-;;;; Load solarized color themes
+
+;;;; org-mode
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+;;;; Ergoemacs
+;; (setq ergoemacs-theme "lvl1")
+;; (setq ergoemacs-keyboard-layout "dv")
+;;(require 'ergoemacs-mode)
+;;(ergoemacs-mode 1)
+
+;;;; Load d color themes
 ;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 ;; (load-theme 'solarized-light)
+(load-theme 'tango-dark)
 
+
+;;;; Completions
+;; (setq completion-ignored-extensions `".o"',
+;; `".elc"', and `"~"')
+(icomplete-mode)
 
 
 ;;;; Mode line settings
 ;; show time/date and system load in mode line
 (display-time-mode t)
 
+;;;; Uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "|")
 
+;;;; windmove -- shift-arrow keys to switch to other buffer
+(windmove-default-keybindings)
+
+;;;; smex
+(global-set-key (kbd "M-x") 'smex)
 
 ;;;; Show/hide/misc
-(show-paren-mode t)
+;;(show-paren-mode nil)
+(show-smartparens-global-mode t)
 (column-number-mode t)
 ;; keep a list of recently opened files
 (recentf-mode t)
@@ -76,6 +111,63 @@
 ;;;; Aliases
 (defalias 'yes-or-no-p 'y-or-n-p)
 (defalias 'list-buffers 'ibuffer)
+
+
+(defun my-c-mode-cedet-hook ()
+  (imenu-add-to-menubar "TAGS")
+  (local-set-key "." 'semantic-complete-self-insert)
+  (local-set-key ">" 'semantic-complete-self-insert)
+  (add-to-list 'ac-sources 'ac-source-gtags)
+  (add-to-list 'ac-sources 'ac-source-semantic))
+(add-hook 'c-mode-common-hook 'my-c-mode-cedet-hook)
+
+;; (when (cedet-gnu-global-version-check t)
+;;   (semanticdb-enable-gnu-global-databases 'c-mode)
+;;   (semanticdb-enable-gnu-global-databases 'c++-mode))
+;; (ede-cpp-root-project "C-Client-Server"
+;;                 :name "C-Client-Server Project"
+;;                 :file "~/Dropbox/Fall2013/EECS3150-data-com/C-Client-Server/CMakeLists.txt"
+;;                 :include-path '("/"
+;;                                 "/server"
+;; 				"client")
+;;                 :system-include-path '("/usr/include"))
+
+;;;; IRC
+(rcirc-track-minor-mode 1)
+
+;; TODO show/hide time stamp "toggle"
+(setq rcirc-time-format "%m-%d %r ")
+
+(add-to-list 'rcirc-server-alist
+	     '("irc.freenode.net"
+	       :channels ("#emacs" "#bedrock" "#lisp" "#lispcafe" "#stumpwm" "#clnoobs")))
+
+(setq rcirc-default-user-name "ckoch786"
+      rcirc-default-user-full-name "Cory Koch")
+
+(eval-after-load 'rcirc
+  '(defun-rcirc-command reconnect (arg)
+     "Reconnect the server process."
+     (interactive "i")
+     (unless process
+       (error "There's no process for this target"))
+     (let* ((server (car (process-contact process)))
+	    (port (process-contact process :service))
+	    (nick (rcirc-nick process))
+	    channels query-buffers)
+       (dolist (buf (buffer-list))
+	 (with-current-buffer buf
+	   (when (eq process (rcirc-buffer-process))
+	     (remove-hook 'change-major-mode-hook
+			  'rcirc-change-major-mode-hook)
+	     (if (rcirc-channel-p rcirc-target)
+		 (setq channels (cons rcirc-target channels))
+	       (setq query-buffers (cons buf query-buffers))))))
+       (delete-process process)
+       (rcirc-connect server port nick
+		      rcirc-default-user-name
+		      rcirc-default-user-full-name
+		      channels))))
 
 
 
@@ -137,6 +229,12 @@
 
 
 
+;;;; slime
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")
+
+
 ;;;; yasnippets
 ;;(yas-global-mode t)
 
@@ -144,6 +242,7 @@
 
 ;;;; erc
 ;;(erc-select)
+(setq erc-hide-list '("JOIN" "PART" "QUIT"))
 
 
 
@@ -155,7 +254,8 @@
 ;;; ido-mode
 (require 'ido)
 (ido-mode 1)
-
+;; Display ido results vertically, rather than horizontally
+(setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
 
 
 ;;;; hippie-expand
@@ -191,8 +291,8 @@
 (setq c-default-style "linux"
       c-basic-offset 2)
 ;; C++ Style for NLDS
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;; (add-hook 'c-mode-common-hook 'google-set-c-style)
+;; (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
 
 
@@ -296,10 +396,63 @@ PWD is not in a git repo (or the git command is not found)."
 
 
 
-;;;; custom-set-variables
+;;;; Cory's functions
+(defun open-and-mark-in-ibuffer (file-path)
+  "Opens the file and marks the file in the ibuffer
+file-path : the full path to the file for example
+~/.emacs.d/init.el to open your init.el.
+This function is especially useful if you desire to 
+reguarly open a list of files or directories and use the occurs function
+in ibuffer to search for files."
+  (interactive)
+  (ibuffer)
+  (ibuffer-mark-by-file-name-regexp 
+   (car 
+    (last 
+     (split-string file-path "/")))))
+
+;;(org-remeber-insinuate)
+
+
+;; TODO use thing-at ?? See video
+;; TODO use a custom variable for the finished.org file instead of the hard coded value
+(defun org-move-finished ()
+  ""
+  (interactive)
+  ;; find checked items, if on a check box TODO check
+  (when (org-at-item-checkbox-p)
+    (outline-previous-heading) ; move to the header of the list
+    (org-cut-special) ; get the list
+    (let ((s (car kill-ring)))
+      (append-to-file s nil "~/Dropbox/ELisp/finished.org")))
+
+  ;; append a time stamp to finished
+  ;; grab the header list item and append it to finished
+  ;; grab the checked items and their sublists if any and append them to finished
+  )
+;; TODO bind org-move-finished to C-c f
+
+;;;; TODO use a hook to add this function to doc-view-mode
+(require 'doc-view)
+(defvar dv-mark)
+(defun dv-push-mark ()
+  (interactive)
+  (push dv-mark (doc-view-current-page)))
+
+(defun dv-pop-mark ()
+  (interactive)
+  (doc-view-goto-page (pop dv-mark)))
+
+
+ ;;;; custom-set-variables
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (load custom-file 'noerror)
 
 
 ;;;; Start server so that all new instances of Emacs will use this instance
 (server-start)
+
+
+
+
+

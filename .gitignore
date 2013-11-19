@@ -15,3 +15,14 @@
 .emacs.d/tramp
 .emacs.d/ac-comphist.dat
 .emacs.d/emacs-custom.el
+.emacs.d/el-get/
+/.emacs.d/ac-comphist.dat
+/.emacs.d/el-get/el-get
+/.emacs.d/elpa/archives/gnu/archive-contents
+/.emacs.d/elpa/archives/gnu/archive-contents~
+/.emacs.d/elpa/archives/marmalade/archive-contents
+/.emacs.d/elpa/archives/marmalade/archive-contents~
+/.emacs.d/srecode-map.el
+/.emacs.d/tramp
+/.emacs.d/url/cookies
+/.emacs.d/url/cookies~
